@@ -171,24 +171,48 @@ public class Date {
 
 			switch(this.month){
 				case 1:
-				case 2:
-				case 3:
 					season="Invierno";
+					break;
+				case 2:
+					season="Invierno";
+					break;
+				case 3:
+					if(this.day<21) {
+					season="Invierno";
+					} else season ="Primavera";
 					break;
 				case 4:
-				case 5:
-				case 6:
 					season="Primavera";
 					break;
+				case 5:
+					season="Primavera";
+					break;
+				case 6:
+					if(this.day<21) {
+					season="Primavera";
+					} else season="Verano";
+					break;
 				case 7:
+					season="Verano";
+					break;
 				case 8:
+					season="Verano";
+					break;
 				case 9:
-					season="OtoÃ±o";
+					if(this.day<21) {
+					season="Verano";
+					} else season="Otoño";
 					break;
 				case 10:
+					season="Otoño";
+					break;
 				case 11:
+					season="Otoño";
+					break;
 				case 12:
-					season="Invierno";
+					if(this.day<21) {
+					season="Otoño";
+					} else season="Invierno";
 					break;
 			}
 			return season;
